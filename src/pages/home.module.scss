@@ -1,1 +1,11 @@
-// TODO
+.container {
+  flex-direction: column;
+}
+
+.loadMore {
+  background: none;
+  color: var(--highlight);
+  border: none;
+  width: fit-content;
+  font-size: 1.375rem;
+}
