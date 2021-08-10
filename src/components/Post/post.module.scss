@@ -1,0 +1,26 @@
+.container {
+  margin-top: 1.5rem;
+
+  font-size: 1.125rem;
+  > p {
+    margin: 0.5rem 0 1rem;
+  }
+  > a {
+    text-decoration: none;
+    color: var(--header);
+    transition: 0.4s ease-in-out;
+    :hover {
+      color: var(--highlight);
+    }
+  }
+  > footer {
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    > span {
+      margin-left: 1rem;
+    }
+    > * > svg {
+      margin-right: 0.5rem;
+    }
+  }
+}
