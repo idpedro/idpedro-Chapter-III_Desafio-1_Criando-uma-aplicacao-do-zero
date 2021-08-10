@@ -4,4 +4,32 @@
   padding: 0;
 }
 
-// TODO
+:root {
+  --highlight: #ff57b2;
+  --body-background: #1a1d23;
+  --body-text: #d7d7d7;
+  --header: #f8f8f8;
+}
+
+body {
+  width: 100%;
+  background: var(--body-background);
+  color: var(--body-text);
+}
+
+button,
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  color: var(--header);
+}
+
+a {
+  text-decoration: none;
+}
