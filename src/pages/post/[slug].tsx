@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { FaCalendar, FaUser, FaClock } from 'react-icons/fa';
@@ -30,7 +31,8 @@ interface PostProps {
 }
 
 export default function Post({ post }: PostProps): JSX.Element {
-  if (!post)
+  const router = useRouter();
+  if (router.isFallback)
     return (
       <section className={styles.loading}>
         <p>Carregando...</p>
@@ -97,7 +99,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     },
   }));
   return {
-    paths: [{ params: { slug: 'none' } }],
+    paths,
     fallback: true,
   };
 };
