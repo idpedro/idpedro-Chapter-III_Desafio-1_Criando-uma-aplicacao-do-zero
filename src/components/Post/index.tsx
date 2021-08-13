@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaCalendar, FaUser } from 'react-icons/fa';
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
@@ -21,9 +22,9 @@ export default function PostPreviewr({
   const { title, subtitle, author } = post.data;
   return (
     <div className={styles.container}>
-      <a href={`http://localhost:3000/post/${post.uid}`}>
+      <Link href={`/post/${post.uid}`}>
         <h1>{title}</h1>
-      </a>
+      </Link>
       <p>{subtitle}</p>
       <footer>
         <time>
